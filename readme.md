@@ -1,1 +1,1 @@
-basic setup for te hackathon.
+basic setup for the hackathon.
