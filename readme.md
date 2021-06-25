@@ -5,6 +5,9 @@ First version:
 contribute an NFT representing a property as a stake,
 receive a number of ERC20  tokens as a 100/100 fraction of the NFT
 
+NFTs represent the value of the Real Estate - but it's not liquid. We may be able to use these NFTs to get DeFi based loans. We also then need to use revenues from Real Estate, by converting them to Stablecoins (ERC20, Fiat Backed) to pay the Loan Fees and Interest payments.
+
+
 
 Second version:
 realestateDAO full functionality? - more questions than answers-
