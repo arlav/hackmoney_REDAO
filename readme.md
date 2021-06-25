@@ -19,3 +19,8 @@ Staking:
 https://forum.openzeppelin.com/t/how-to-create-an-erc20-token-with-staking-feature/5286
 
 https://github.com/Synthetixio/synthetix/blob/develop/contracts/StakingRewards.sol
+
+
+https://github.com/animocabrands/ethereum-contracts-nft_staking
+
+
