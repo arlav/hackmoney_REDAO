@@ -33,7 +33,7 @@ contract RealEstate is ERC721, ERC721Burnable, Pausable, AccessControl {
 
 //@dev: sets up three roles: admin, pauser (for security) and minter
 //@dev:admin is also the owner
-    constructor() public ERC721("TopoToken", "TPK")
+    constructor() public ERC721("RealEstate", "RET")
     {
       _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
       _setupRole(PAUSER_ROLE, msg.sender);
