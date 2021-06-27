@@ -19,6 +19,12 @@ Can we set ERC721 tokens as collateral in other DeFi products?
 ![Diagram Ideas](https://github.com/arlav/hackmoney_REDAO/blob/main/real_estate_dao_rev-0.3.0.png?raw=true)
 
 
+ToDo:
+update, run and understand the stakenft contract- simpliffy it for 0.8.0 compilers.
+create / update the 721 real_estate contract to work with information from chain.link- or provide link to 'IPFS for that'
+build a simple front end, that allows to stake the NFTs and receive our governance token, then lock and unlock the nfts with erc20 token.
+write the contracts for erc20.
+
 
 
 Links:
