@@ -16,7 +16,7 @@ realestateDAO full functionality? - more questions than answers-
 ERC20 tokens on the open market-
 Can we set ERC721 tokens as collateral in other DeFi products?
 
-![Diagram Ideas](https://github.com/arlav/hackmoney_REDAO/blob/main2/real_estate_dao_rev-0.3.0.png?raw=true)
+![Diagram Ideas](https://github.com/arlav/hackmoney_REDAO/blob/main/real_estate_dao_rev-0.3.0.png?raw=true)
 
 
 
