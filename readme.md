@@ -31,3 +31,5 @@ https://github.com/Synthetixio/synthetix/blob/develop/contracts/StakingRewards.s
 
 https://github.com/animocabrands/ethereum-contracts-nft_staking
 
+truffle box used:
+https://github.com/adrianmcli/truffle-next
