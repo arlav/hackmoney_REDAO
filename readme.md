@@ -17,6 +17,9 @@ ERC20 tokens on the open market-
 Can we set ERC721 tokens as collateral in other DeFi products?
 
 ![Diagram Ideas](https://github.com/arlav/hackmoney_REDAO/blob/main/real_estate_dao_rev-0.3.0.png?raw=true)
+diagrams:
+https://drive.google.com/file/d/1O82zE_5iNwcE7hR-j5xsSAnxCni-Qw7E/view?usp=sharing
+
 
 
 ToDo:
