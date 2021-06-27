@@ -33,3 +33,4 @@ https://github.com/animocabrands/ethereum-contracts-nft_staking
 
 truffle box used:
 https://github.com/adrianmcli/truffle-next
+https://medium.com/@adrianmcli/rapid-ethereum-dapp-development-with-next-js-f6354400e4d4
