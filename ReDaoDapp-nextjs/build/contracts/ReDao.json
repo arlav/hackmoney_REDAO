@@ -1,0 +1,132 @@
+{
+  "contractName": "ReDao",
+  "abi": [],
+  "metadata": "{\"compiler\":{\"version\":\"0.6.1+commit.e6f7d5a4\"},\"language\":\"Solidity\",\"output\":{\"abi\":[],\"devdoc\":{\"methods\":{}},\"userdoc\":{\"methods\":{}}},\"settings\":{\"compilationTarget\":{\"/home/h1c0/Documents/H1c0/EthGlobal/MoneyHack_RealEstateDAO/GITHUB/alternative/ReDaoDapp-nextjs/contracts/ReDao.sol\":\"ReDao\"},\"evmVersion\":\"istanbul\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":false,\"runs\":200},\"remappings\":[]},\"sources\":{\"/home/h1c0/Documents/H1c0/EthGlobal/MoneyHack_RealEstateDAO/GITHUB/alternative/ReDaoDapp-nextjs/contracts/ReDao.sol\":{\"keccak256\":\"0x55dd449605fb2a363acf264f5a7580e6cdd6abf803b062957c8169f1e0d76a50\",\"urls\":[\"bzz-raw://ee1abf6bb3b568cdc99b4e88cd3bd194501f62e527b7df4e62b2edf8932960e2\",\"dweb:/ipfs/QmatpUVHGEcaSWMSQeWf5U9yWASv69HyyQPAVJFEE6WnAV\"]}},\"version\":1}",
+  "bytecode": "0x6080604052348015600f57600080fd5b50603f80601d6000396000f3fe6080604052600080fdfea26469706673582212200ed1bfc1c3bfca2c158985f6ce301a1316b32ed5da21303849a535d68686db0a64736f6c63430006010033",
+  "deployedBytecode": "0x6080604052600080fdfea26469706673582212200ed1bfc1c3bfca2c158985f6ce301a1316b32ed5da21303849a535d68686db0a64736f6c63430006010033",
+  "sourceMap": "34:19:1:-:0;;;;8:9:-1;5:2;;;30:1;27;20:12;5:2;34:19:1;;;;;;;",
+  "deployedSourceMap": "34:19:1:-:0;;;;;",
+  "source": "\npragma solidity >=0.5.8 <0.9.0;\n\ncontract ReDao {\n\n}\n",
+  "sourcePath": "/home/h1c0/Documents/H1c0/EthGlobal/MoneyHack_RealEstateDAO/GITHUB/alternative/ReDaoDapp-nextjs/contracts/ReDao.sol",
+  "ast": {
+    "absolutePath": "/home/h1c0/Documents/H1c0/EthGlobal/MoneyHack_RealEstateDAO/GITHUB/alternative/ReDaoDapp-nextjs/contracts/ReDao.sol",
+    "exportedSymbols": {
+      "ReDao": [
+        35
+      ]
+    },
+    "id": 36,
+    "nodeType": "SourceUnit",
+    "nodes": [
+      {
+        "id": 34,
+        "literals": [
+          "solidity",
+          ">=",
+          "0.5",
+          ".8",
+          "<",
+          "0.9",
+          ".0"
+        ],
+        "nodeType": "PragmaDirective",
+        "src": "1:31:1"
+      },
+      {
+        "abstract": false,
+        "baseContracts": [],
+        "contractDependencies": [],
+        "contractKind": "contract",
+        "documentation": null,
+        "fullyImplemented": true,
+        "id": 35,
+        "linearizedBaseContracts": [
+          35
+        ],
+        "name": "ReDao",
+        "nodeType": "ContractDefinition",
+        "nodes": [],
+        "scope": 36,
+        "src": "34:19:1"
+      }
+    ],
+    "src": "1:53:1"
+  },
+  "legacyAST": {
+    "attributes": {
+      "absolutePath": "/home/h1c0/Documents/H1c0/EthGlobal/MoneyHack_RealEstateDAO/GITHUB/alternative/ReDaoDapp-nextjs/contracts/ReDao.sol",
+      "exportedSymbols": {
+        "ReDao": [
+          35
+        ]
+      }
+    },
+    "children": [
+      {
+        "attributes": {
+          "literals": [
+            "solidity",
+            ">=",
+            "0.5",
+            ".8",
+            "<",
+            "0.9",
+            ".0"
+          ]
+        },
+        "id": 34,
+        "name": "PragmaDirective",
+        "src": "1:31:1"
+      },
+      {
+        "attributes": {
+          "abstract": false,
+          "baseContracts": [
+            null
+          ],
+          "contractDependencies": [
+            null
+          ],
+          "contractKind": "contract",
+          "documentation": null,
+          "fullyImplemented": true,
+          "linearizedBaseContracts": [
+            35
+          ],
+          "name": "ReDao",
+          "nodes": [
+            null
+          ],
+          "scope": 36
+        },
+        "id": 35,
+        "name": "ContractDefinition",
+        "src": "34:19:1"
+      }
+    ],
+    "id": 36,
+    "name": "SourceUnit",
+    "src": "1:53:1"
+  },
+  "compiler": {
+    "name": "solc",
+    "version": "0.6.1+commit.e6f7d5a4.Emscripten.clang"
+  },
+  "networks": {
+    "5777": {
+      "events": {},
+      "links": {},
+      "address": "0x4cD53751996ccb51C91a52d68C8F0A571363791F",
+      "transactionHash": "0xf68d061523a88d09b011552c7231d0b83a190a79868754a30d9c327dbe4b5319"
+    }
+  },
+  "schemaVersion": "3.4.1",
+  "updatedAt": "2021-06-28T14:14:52.345Z",
+  "networkType": "ethereum",
+  "devdoc": {
+    "methods": {}
+  },
+  "userdoc": {
+    "methods": {}
+  }
+}
