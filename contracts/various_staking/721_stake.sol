@@ -1,6 +1,19 @@
 // SPDX-License-Identifier: MIT
 
+//to-do-read the code and update the OpenZeppelin for remix.
+//run a version for local deployment on Ganache-
+//analyse the code with hooks for the front end-
+
 pragma solidity 0.6.8;
+
+
+import "@openzeppelin/contracts/utils/SafeCast.sol";
+import "@openzeppelin/contracts/math/SafeMath.sol";
+import "@openzeppelin/contracts/math/SignedSafeMath.sol";
+import "@openzeppelin/contracts/access/Ownable.sol";
+import "@animoca/ethereum-contracts-erc20_base/contracts/token/ERC20/IERC20.sol";
+import "@animoca/ethereum-contracts-assets_inventory/contracts/token/ERC1155/ERC1155TokenReceiver.sol";
+
 
 import "@openzeppelin/contracts/utils/SafeCast.sol";
 import "@openzeppelin/contracts/math/SafeMath.sol";
@@ -718,7 +731,7 @@ abstract contract NftStaking is ERC1155TokenReceiver, Ownable {
  */
 interface IWhitelistedNftContract {
     /**
-     * ERC1155: Transfers `value` amount of an `id` from  `from` to `to` (with safety call). 
+     * ERC1155: Transfers `value` amount of an `id` from  `from` to `to` (with safety call).
      * @dev Caller must be approved to manage the tokens being transferred out of the `from` account (see "Approval" section of the standard).
      * @dev MUST revert if `to` is the zero address.
      * @dev MUST revert if balance of holder for token `id` is lower than the `value` sent.
