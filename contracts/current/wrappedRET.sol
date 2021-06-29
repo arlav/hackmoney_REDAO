@@ -1,15 +1,5 @@
-/// @title Main contract for WrappedCK. This contract converts Cryptokitties between the ERC721 standard and the
-///  ERC20 standard by locking cryptokitties into the contract and minting 1:1 backed ERC20 tokens, that
-///  can then be redeemed for cryptokitties when desired.
-/// @notice When wrapping a cryptokitty, you get a generic WCK token. Since the WCK token is generic, it has no
-///  no information about what cryptokitty you submitted, so you will most likely not receive the same kitty
-///  back when redeeming the token unless you specify that kitty's ID. The token only entitles you to receive
-///  *a* cryptokitty in return, not necessarily the *same* cryptokitty in return. A different user can submit
-///  their own WCK tokens to the contract and withdraw the kitty that you originally deposited. WCK tokens have
-///  no information about which kitty was originally deposited to mint WCK - this is due to the very nature of
-///  the ERC20 standard being fungible, and the ERC721 standard being nonfungible.
-
 // SPDX-License-Identifier: MIT
+
 pragma solidity ^0.7.0;
 
 
