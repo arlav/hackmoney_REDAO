@@ -1,0 +1,10 @@
+
+
+The NFT contract gets fed with Chain.link data and geometrical information, then mints and NFTsrepresenting the property.
+The NFT contract should have a registry funcion, or a hook with "TheGraph" that provides an index of all NFTs locked in tthe contract.
+
+
+
+The NFT is then send into a contrract address, to the contract that provides liquidity against the NFT, by wrapping the ERC721 and minting ERC20 against the value of the ERC721. 
+
+We can then create a wrapped version of the NFT, which means that the NFT is locked in the liquidity conttract, and a number of ERC20 tokens are minted against its value. Probably we can use Chain.link to coordinae the value of the NFT with the valueof tokens that are minted.
