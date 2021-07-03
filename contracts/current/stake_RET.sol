@@ -50,6 +50,10 @@ struct RealEstateTokenCollateral {
     uin256 tokenId; //this is the number of the token
   }
 
+//mapping one lender
+
+mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
+
 
 
 
