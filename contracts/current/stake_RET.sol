@@ -14,6 +14,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/access/AccessControl.sol";
 
 //IERC20 - //and potnetially the IERC721
+//contract must support ERC-165, i.e receiving ERC721 tokens.
 
 //@dev: uncomment these or use with openzeppelin on trufle
 //import "@openzeppelin/contracts/token/ERC20/ERC20.sol"
@@ -26,22 +27,13 @@ contract stake_RET is Ownable, Pausable, ERC20, IERC20, IERC721 {
   bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
   bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
-  //function isStakeholder
-  // stake mapping(address => uint256) internal stakes;
-  // function stakef
-  isStakeholder
-  stakeOf
-  totalStakes
-//@dev: this holds the EERC721 lending information
+
 
 struct RealEstateTokenCollateral {
   uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
   uint256 collateralTimeStamp;
-  uint256 ERC20;  //@dev: nunmber o ERC 20 tokens given ou for the NFTs
-
-
+  uint256 ERC20;  //@dev: nunmber of ERC 20 tokens given ou for the NFTs
 }
-
 
 //@dev: This holds the NFT data from the NFT contract.
   struct RealEstateTokenEntry {
@@ -53,6 +45,11 @@ struct RealEstateTokenCollateral {
 //mapping one lender
 
 mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
+
+funtion stake
+fuction unstake
+
+
 
 
 
