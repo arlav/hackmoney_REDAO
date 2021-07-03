@@ -29,7 +29,9 @@ contract stake_RET is Ownable, Pausable, ERC20, IERC20, IERC721 {
   bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
   bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
-
+//
+event stakeRET-
+event unstakeRET-
 
 struct RealEstateTokenCollateral {
   uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
@@ -41,17 +43,26 @@ struct RealEstateTokenCollateral {
   struct RealEstateTokenEntry {
     address ownerAddress; // This holds the address of the owner of the ERC721
     address tokenAddress; //This holds the address of the ERC721 real Estate contract is deployed to-
-    uin256 tokenId; //this is the number of the token
+    uint256 tokenId; //this is the number of the token
   }
 
 //mapping one lender
 
+
+
 mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
 
-funtion stake
-function mintERC20
+function stakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
+  //event needed
+}
+function unstakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
 
-fuction unstake
+}
+
+function mintERC20 () public view {
+  require
+}
+
 
 
 
