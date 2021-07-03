@@ -29,6 +29,12 @@ build a simple front end, that allows to stake the NFTs and receive our governan
 write the contracts for erc20.
 
 
+weekend.create an ERC20 contract that also takes a stake from an NFT. use a mapping to record the NFT- wiht a stake id, and stake size
+https://medium.com/hackernoon/implementing-staking-in-solidity-1687302a82cf
+clean up notes
+
+
+
 
 Links:
 
