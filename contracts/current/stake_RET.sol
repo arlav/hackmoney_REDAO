@@ -24,7 +24,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4
 //import "@openzeppelin/contracts/utils/Counters.sol";
 //import "@openzeppelin/contracts/access/AccessControl.sol";
 
-contract stake_RET is Ownable, Pausable, ERC20, IERC20, IERC721 {
+contract stakeRET is Ownable, Pausable, ERC20, IERC20, IERC721 {
 
   bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
   bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
@@ -32,11 +32,12 @@ contract stake_RET is Ownable, Pausable, ERC20, IERC20, IERC721 {
 //
 event stakeRET-
 event unstakeRET-
+event ERC20mint-
 
 struct RealEstateTokenCollateral {
   uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
   uint256 collateralTimeStamp;
-  uint256 ERC20;  //@dev: nunmber of ERC 20 tokens given ou for the NFTs
+  uint256 ERC20stake;  //@dev: nunmber of ERC 20 tokens given tou for the NFTs
 }
 
 //@dev: This holds the NFT data from the NFT contract.
@@ -54,13 +55,18 @@ mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public Collat
 
 function stakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
   //event needed
+  require
+  action
+
 }
 function unstakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
-
+  require
+  action
 }
 
 function mintERC20 () public view {
-  require
+  require //equation that mints a nunmber of erc20 for the value of the erc721
+
 }
 
 
