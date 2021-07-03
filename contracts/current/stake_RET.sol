@@ -32,13 +32,25 @@ contract stake_RET is Ownable, Pausable, ERC20, IERC20, IERC721 {
   isStakeholder
   stakeOf
   totalStakes
+//@dev: this holds the EERC721 lending information
+
+struct RealEstateTokenCollateral {
+  uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
+  uint256 collateralTimeStamp;
+  uint256 ERC20;  //@dev: nunmber o ERC 20 tokens given ou for the NFTs
 
 
-  struct RealEstateTokenEntry{
+}
+
+
+//@dev: This holds the NFT data from the NFT contract.
+  struct RealEstateTokenEntry {
     address ownerAddress;
     address tokenAddress; //This holds the address of the ERC721 real Estate contract is deployed to-
     uin256 tokenId; //this is the number of the token
   }
+
+
 
 
 }
