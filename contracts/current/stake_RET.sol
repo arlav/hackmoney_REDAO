@@ -14,7 +14,9 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/access/AccessControl.sol";
 
 //IERC20 - //and potnetially the IERC721
-//contract must support ERC-165, i.e receiving ERC721 tokens.
+//contract  supports ERC-165, i.e receiving ERC721 tokens - we need to make sure we implement this so that
+//we do not get any trapped tokes.
+
 
 //@dev: uncomment these or use with openzeppelin on trufle
 //import "@openzeppelin/contracts/token/ERC20/ERC20.sol"
@@ -37,7 +39,7 @@ struct RealEstateTokenCollateral {
 
 //@dev: This holds the NFT data from the NFT contract.
   struct RealEstateTokenEntry {
-    address ownerAddress;
+    address ownerAddress; // This holds the address of the owner of the ERC721
     address tokenAddress; //This holds the address of the ERC721 real Estate contract is deployed to-
     uin256 tokenId; //this is the number of the token
   }
@@ -47,6 +49,8 @@ struct RealEstateTokenCollateral {
 mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
 
 funtion stake
+function mintERC20
+
 fuction unstake
 
 
