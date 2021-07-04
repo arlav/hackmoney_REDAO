@@ -14,13 +14,11 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/access/AccessControl.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/utils/Counters.sol";
 
-//not using snapshots
-//import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contracts/token/ERC20/extensions/ERC20Snapshot.sol";
 
+//stake NFT
+//creditERC20 to your Address - AFTER you confirm that NFT is stakeDelta
+//Use the ERC20 Liquidity/Governance token.
 
-//IERC20 - //and potetially the IERC721
-//contract  supports ERC-165, i.e receiving ERC721 tokens - we need to make sure we implement this so that
-//we do not get any trapped tokes.
 
 
 //@dev: uncomment these or use with openzeppelin on trufle
@@ -47,6 +45,8 @@ contract stakeRET is ERC20, IERC20, ERC20Burnable, IERC721, Pausable, AccessCont
 event stakeRET-
 event unstakeRET-
 event ERC20mint-
+event ERC20withdraw?
+
 
 constructor() ERC20("stakeRET", "SRT") {
         _setupRole(DEFAULT_ADMIN_ROLE, msg.sender);
@@ -56,7 +56,7 @@ constructor() ERC20("stakeRET", "SRT") {
     }
 
     /**
-    * Settig up the structs we need for the functions
+    * Setting up the structs we need for the functions
     */
 
 struct RETCollateral {
@@ -76,8 +76,7 @@ struct RETCollateral {
   mapping (uint => RETStake) RETStakes;
 
 
-////mapping one lender
-//mapping ()
+//
 //mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
 
 
