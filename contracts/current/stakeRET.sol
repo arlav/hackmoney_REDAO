@@ -61,9 +61,7 @@ struct RealEstateTokenCollateral {
   }
 
 //mapping one lender
-
-
-
+mapping ()
 mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
 
 function pause() public {
@@ -79,8 +77,8 @@ function unpause() public {
 //need to set up the requirements for this
 function stakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
   //event needed
-  require
-  action
+  require(msg.sender == RealEstateTokenEntry(ownerAddress), 'you do not own this RET');
+  action //check from OpenZeppelin appropriate actions.
 
 }
 
@@ -90,7 +88,7 @@ function unstakeRET (address ownerAddress, address tokenAddress, uint256 tokenId
   action
 }
 
-function mint(address to, uint256 amount) public {
+function mint(address to, uint256 amount) public external payable onlyOwner {
     require(hasRole(MINTER_ROLE, msg.sender));
     _mint(to, amount);
 }
