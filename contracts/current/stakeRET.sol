@@ -37,6 +37,12 @@ contract stakeRET is ERC20, IERC20, ERC20Burnable, IERC721, Pausable, AccessCont
 //@dev: RET stands for Real Estate Token
 //@dev: SRT stands for Staking R(E)T
 //declare the events here.
+/**
+* RET= Real Estate Token
+* SRT= Stakingg R(E)T
+* declaring the events we need for registering with other smart contracts and the frontend.
+*/
+
 
 event stakeRET-
 event unstakeRET-
@@ -49,6 +55,9 @@ constructor() ERC20("stakeRET", "SRT") {
         _setupRole(MINTER_ROLE, msg.sender);
     }
 
+    /**
+    * Settig up the structs we need for the functions
+    */
 
 struct RETCollateral {
   uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
@@ -57,21 +66,25 @@ struct RETCollateral {
 }
 
 //@dev: This holds the NFT data from the NFT contract.
-  struct RETEntry {
+  struct RETStake {
     address ownerAddress; // This holds the address of the owner of the ERC721
     address tokenAddress; //This holds the address of the ERC721 real Estate contract is deployed to-
     uint256 tokenId; //this is the number of the token
   }
 
-  uint256 numRETEntrys;
-  mapping (uint => RETEntry) RETEntrys;
+  uint256 numRETStakes;
+  mapping (uint => RETStake) RETStakes;
 
 
 ////mapping one lender
 //mapping ()
 //mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
 
-//administratively pause and unpause a contracts
+
+/**
+* administratively pause and unpause the contract.
+*/
+
 function pause() public {
     require(hasRole(PAUSER_ROLE, msg.sender));
     _pause();
@@ -81,6 +94,7 @@ function unpause() public {
     require(hasRole(PAUSER_ROLE, msg.sender));
     _unpause();
 }
+
 
 //need to set up the requirements for this
 function stakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
