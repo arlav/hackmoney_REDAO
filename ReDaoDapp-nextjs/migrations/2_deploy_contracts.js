@@ -1,5 +1,5 @@
-const ReDao = artifacts.require("ReDao");
+const RealEstate = artifacts.require("RealEstate");
 
 module.exports = function (deployer) {
-  deployer.deploy(ReDao);
+  deployer.deploy(RealEstate);
 };
