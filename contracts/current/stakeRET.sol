@@ -34,7 +34,10 @@ contract stakeRET is ERC20, IERC20, ERC20Burnable, IERC721, Pausable, AccessCont
   bytes32 public constant PAUSER_ROLE = keccak256("PAUSER_ROLE");
   bytes32 public constant ADMIN_ROLE = keccak256("ADMIN_ROLE");
 
+//@dev: RET stands for Real Estate Token
+//@dev: SRT stands for Staking R(E)T
 //declare the events here.
+
 event stakeRET-
 event unstakeRET-
 event ERC20mint-
@@ -47,23 +50,28 @@ constructor() ERC20("stakeRET", "SRT") {
     }
 
 
-struct RealEstateTokenCollateral {
+struct RETCollateral {
   uint256 valuation; //@dev this should be the valuation off the RealEstateNFT from ChainlinkClient
   uint256 collateralTimeStamp; //usee this as a security check in the minting.
   uint256 ERC20stake;  //@dev: nunmber of ERC 20 tokens given to you for the NFTs
 }
 
 //@dev: This holds the NFT data from the NFT contract.
-  struct RealEstateTokenEntry {
+  struct RETEntry {
     address ownerAddress; // This holds the address of the owner of the ERC721
     address tokenAddress; //This holds the address of the ERC721 real Estate contract is deployed to-
     uint256 tokenId; //this is the number of the token
   }
 
-//mapping one lender
-mapping ()
-mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
+  uint256 numRETEntrys;
+  mapping (uint => RETEntry) RETEntrys;
 
+
+////mapping one lender
+//mapping ()
+//mapping (address => mapping(uint256 => RealEstateTokenCollateral)) public CollateralList;
+
+//administratively pause and unpause a contracts
 function pause() public {
     require(hasRole(PAUSER_ROLE, msg.sender));
     _pause();
@@ -78,6 +86,7 @@ function unpause() public {
 function stakeRET (address ownerAddress, address tokenAddress, uint256 tokenId) public view returns {
   //event needed
   require(msg.sender == RealEstateTokenEntry(ownerAddress), 'you do not own this RET');
+  _stakeRET(numRETEntrys)
   action //check from OpenZeppelin appropriate actions.
 
 }
