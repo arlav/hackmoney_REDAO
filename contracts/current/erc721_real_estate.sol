@@ -1,4 +1,5 @@
 //Contract based on https://docs.openzeppelin.com/contracts/3.x/erc721
+//
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.7.0;
 
@@ -6,6 +7,7 @@ pragma solidity ^0.7.0;
 //@dev: sets up OpenZeppelin lirbaries needed for an NFT
 //@dev: plus additional libraries needed for pause and access control
 //for remix use the 3.4 version of the contract
+//this is a wrapping contract-
 
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/token/ERC721/ERC721.sol";
 import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/release-v3.4/contracts/token/ERC721/ERC721Burnable.sol";
@@ -64,6 +66,6 @@ contract RealEstate is ERC721, ERC721Burnable, Pausable, AccessControl {
         uint256 newItemId = _tokenIds.current();
         _mint(recipient, newItemId);
         _setTokenURI(newItemId, tokenURI);
-        return newItemId;
+        return newItemId;  //be carefull here that the newItemid might be the id you need to connect to the wrapping contract
     }
 }
