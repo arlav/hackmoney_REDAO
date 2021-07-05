@@ -84,11 +84,14 @@ IPFS CID's
 Property 1 : Qmbar4ydc8YR1CF8QQmR2XiXdYxT3X9dcncqBkX5VHNxKH
 Property 2 : QmPigmJHmHs1QfKbvk1drsNCjyfZf3hbMLjMwH9JLr7aLL
 Property 3 : QmcRg7hvdxD5UQFsncz2conCmcfeiJWeCCEWpvxM4rzNG1
-bytes32 : 0x0000000000000000000000000000000000000000000000000000000000000000
 
 address : 0xBb604479B2151f3C72a7456873Fdb90f81B676C3
 
 let nft = await RealEstate.deployed()
+await nft.name()
+await nft.symbol()
 await nft.mint('0xBb604479B2151f3C72a7456873Fdb90f81B676C3', 1, 'Qmbar4ydc8YR1CF8QQmR2XiXdYxT3X9dcncqBkX5VHNxKH')
+await nft.mint('0xBb604479B2151f3C72a7456873Fdb90f81B676C3', 2, 'QmPigmJHmHs1QfKbvk1drsNCjyfZf3hbMLjMwH9JLr7aLL')
 nft.tokenURI(1)
+nft.tokenURI(2)
 */
