@@ -16,7 +16,7 @@ import "https://github.com/OpenZeppelin/openzeppelin-contracts/blob/master/contr
 
 
 //stake NFT
-//creditERC20 to your Address - AFTER you confirm that NFT is stakeDelta
+//creditERC20 to your Address - AFTER you confirm that NFT is stakeD
 //Use the ERC20 Liquidity/Governance token.
 
 

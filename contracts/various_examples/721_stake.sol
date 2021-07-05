@@ -93,7 +93,7 @@ abstract contract NftStaking is ERC1155TokenReceiver, Ownable {
 
     uint256 public startTimestamp;
 
-    IERC20 public immutable rewardsTokenContract;
+    IERC20 public immutable rewardsTokenContract;   //keep this?
     IWhitelistedNftContract public immutable whitelistedNftContract;
 
     uint32 public immutable cycleLengthInSeconds;
@@ -113,6 +113,8 @@ abstract contract NftStaking is ERC1155TokenReceiver, Ownable {
     /* period => rewardsPerCycle */
     mapping(uint256 => uint256) public rewardsSchedule;
 
+
+//do we need a modifier hasStaked
     modifier hasStarted() {
         require(startTimestamp != 0, "NftStaking: staking not started");
         _;
@@ -284,6 +286,8 @@ abstract contract NftStaking is ERC1155TokenReceiver, Ownable {
      * @dev Emits a NftUnstaked event.
      * @param tokenId The token identifier, referencing the NFT being unstaked.
      */
+
+
     function unstakeNft(uint256 tokenId) external virtual {
         TokenInfo memory tokenInfo = tokenInfos[tokenId];
 
@@ -442,6 +446,8 @@ abstract contract NftStaking is ERC1155TokenReceiver, Ownable {
      * @param tokenId Identifier of the staked NFT.
      * @param tokenOwner Owner of the staked NFT.
      */
+
+     // check out this one.
     function _stakeNft(uint256 tokenId, address tokenOwner) internal isEnabled hasStarted {
         require(address(whitelistedNftContract) == msg.sender, "NftStaking: contract not whitelisted");
 
